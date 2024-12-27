@@ -99,4 +99,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="./bin/Debug/AmandsHitmarker.dll" DestinationFolder="C:\SPT\BepInEx\plugins" SkipUnchangedFiles="true"/>
+  </Target>
 </Project>
