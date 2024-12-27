@@ -32,22 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\References\Assembly-CSharp.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\References\BepInEx.dll</HintPath>
+      <HintPath>C:\SPT\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="Comfort">
-      <HintPath>..\References\Comfort.dll</HintPath>
+      <HintPath>C:\SPT\BepInEx\core\Comfort.dll</HintPath>
     </Reference>
     <Reference Include="DissonanceVoip">
-      <HintPath>..\References\DissonanceVoip.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\DissonanceVoip.dll</HintPath>
     </Reference>
+<!--    <Reference Include="Fika.Core">-->
+<!--      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\Fika.Core.dll</HintPath>-->
+<!--    </Reference>-->
     <Reference Include="HarmonyLib">
-      <HintPath>..\References\0Harmony.dll</HintPath>
+      <HintPath>C:\SPT\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="spt-reflection">
-      <HintPath>..\References\spt-reflection.dll</HintPath>
+      <HintPath>C:\SPT\BepInEx\plugins\spt\spt-reflection.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,34 +61,34 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TMPro">
-      <HintPath>..\References\Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\References\UnityEngine.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\References\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\References\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\References\UnityEngine.UI.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>..\References\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>..\References\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>..\References\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\References\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>..\References\Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:\SPT\EscapeFromTarkov_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

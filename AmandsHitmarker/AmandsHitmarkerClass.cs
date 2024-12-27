@@ -21,14 +21,14 @@ namespace AmandsHitmarker
         public static GameObject killListGameObject;
         public static AmandsKillfeedText LastAmandsKillfeedText;
         public static bool hitmarker;
-        public static DamageInfo damageInfo = new DamageInfo();
+        public static DamageInfoStruct damageInfo = new DamageInfoStruct();
         public static EBodyPart bodyPart = EBodyPart.Chest;
         public static bool armorHitmarker;
         //public static float armorDamage;
         //public static DamageInfo armorDamageInfo;
         public static bool armorBreak;
         public static bool killHitmarker;
-        public static DamageInfo killDamageInfo = new DamageInfo();
+        public static DamageInfoStruct killDamageInfo = new DamageInfoStruct();
         public static EPlayerSide killPlayerSide;
         public static EBodyPart killBodyPart = EBodyPart.Chest;
         public static WildSpawnType killRole;
@@ -225,7 +225,7 @@ namespace AmandsHitmarker
             AHitmarkerPlugin.KillPosition.SettingChanged += UpdateKillfeed;
 
             AHitmarkerPlugin.EnableMultiKillfeed.SettingChanged += UsecHitmarkerDebug;
-            AHitmarkerPlugin.MultiKillfeedPMCIconMode.SettingChanged += UsecHitmarkerDebug;
+            AHitmarkerPlugin.MultiKillfeedPmcIconMode.SettingChanged += UsecHitmarkerDebug;
 
             AHitmarkerPlugin.MultiKillfeedChildSpacing.SettingChanged += UpdateMultiKillfeed;
             AHitmarkerPlugin.MultiKillfeedRectPosition.SettingChanged += UpdateMultiKillfeed;
@@ -475,7 +475,7 @@ namespace AmandsHitmarker
                 HitmarkerCenterOffset = AHitmarkerPlugin.CenterOffset.Value + animationCurve.Evaluate(HitmarkerTime);
                 if (firearmController != null && !DebugMode)
                 {
-                    EHitmarkerPositionMode HitmarkerPositionMode = firearmController.IsAiming ? AHitmarkerPlugin.ADSHitmarkerPositionMode.Value : AHitmarkerPlugin.HitmarkerPositionMode.Value;
+                    EHitmarkerPositionMode HitmarkerPositionMode = firearmController.IsAiming ? AHitmarkerPlugin.AdsHitmarkerPositionMode.Value : AHitmarkerPlugin.HitmarkerPositionMode.Value;
                     if (ForceHitmarkerPosition) HitmarkerPositionMode = EHitmarkerPositionMode.Center;
                     switch (HitmarkerPositionMode)
                     {
@@ -561,7 +561,7 @@ namespace AmandsHitmarker
             {
                 if (firearmController != null && !DebugMode)
                 {
-                    EHitmarkerPositionMode HitmarkerPositionMode = firearmController.IsAiming ? AHitmarkerPlugin.ADSHitmarkerPositionMode.Value : AHitmarkerPlugin.HitmarkerPositionMode.Value;
+                    EHitmarkerPositionMode HitmarkerPositionMode = firearmController.IsAiming ? AHitmarkerPlugin.AdsHitmarkerPositionMode.Value : AHitmarkerPlugin.HitmarkerPositionMode.Value;
                     if (ForceHitmarkerPosition) HitmarkerPositionMode = EHitmarkerPositionMode.Center;
                     switch (HitmarkerPositionMode)
                     {
@@ -632,7 +632,7 @@ namespace AmandsHitmarker
                 }
                 if (killBodyPart == EBodyPart.Head)
                 {
-                    if (AHitmarkerPlugin.KillHeadshotXP.Value == EHeadshotXP.On)
+                    if (AHitmarkerPlugin.KillHeadshotXp.Value == EHeadshotXP.On)
                     {
                         float BaseExp = 0;
                         switch (killPlayerSide)
@@ -683,7 +683,7 @@ namespace AmandsHitmarker
             }
             if (killPlayerSide == EPlayerSide.Usec || killPlayerSide == EPlayerSide.Bear)
             {
-                switch (AHitmarkerPlugin.MultiKillfeedPMCIconMode.Value)
+                switch (AHitmarkerPlugin.MultiKillfeedPmcIconMode.Value)
                 {
                     case EMultiKillfeedPMCMode.Generic:
                         sprite = LoadedSprites[AHitmarkerPlugin.MultiKillfeedGenericShape.Value];
@@ -1073,11 +1073,11 @@ namespace AmandsHitmarker
                                 }
                                 break;
                         }
-                        if (killBodyPart == EBodyPart.Head && AHitmarkerPlugin.KillHeadshotXP.Value == EHeadshotXP.OnFormula)
+                        if (killBodyPart == EBodyPart.Head && AHitmarkerPlugin.KillHeadshotXp.Value == EHeadshotXP.OnFormula)
                         {
                             HeadshotExp = (int)((float)BaseExp * Mathf.Max(HeadShotMult - 1f,0));
                         }
-                        if (AHitmarkerPlugin.KillStreakXP.Value)
+                        if (AHitmarkerPlugin.KillStreakXp.Value)
                         {
                             if (Combo.Count != 0)
                             {
